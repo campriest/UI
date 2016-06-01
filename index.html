@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Button One</title>
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <style>
+
+            body{
+                background-color: rgb(255,249, 106);
+
+                }
+            #buttonOne {
+                display:inline;
+                position:absolute;
+                align:left;
+                margin-top: 100px;
+                margin-left: 200px;
+                width: 90px;
+                height: 30px;
+                background: none;
+                border-style: solid;
+                border-radius: 10px;
+                border-width: 3px;
+                border-color: rgb(0,0,0);
+
+
+
+
+            }
+        #buttonOne p{
+            display:inline;
+            position:absolute;
+            align: left;
+            margin-left: 6px;
+            margin-top: 7.2px;
+            font-size:13px;
+            font-family: 'Raleway', sans-serif;
+            color: rgb(0,0,0);
+            cursor:pointer;
+
+
+        }
+
+        .move{
+            -webkit-transition: height .75s;
+            transition: height .75s;
+            height:5px;
+
+        }
+
+        #bar{
+            display: inline;
+            position:absolute;
+            align: left;
+            margin-top: 103px;
+            margin-left: 201.7px;
+            width: 0px;
+            height: 8px;
+            background: black;
+            -webkit-transition: width 3s;
+            transition: width 3s;
+
+
+        }
+
+        </style>
+
+
+
+
+    <head>
+
+    <body>
+
+            <div id = "buttonOne">
+                <p>DOWNLOAD</p>
+                </div>
+                    <div id = "bar">
+                    </div>
+
+
+    </body>
+
+    <script>
+
+
+        var button = document.getElementById("buttonOne");
+                button.addEventListener("click", function(){
+                    button.style.height="8px";
+                    button.style.WebKitTransition = "height 1s";
+                    button.style.transition = "height 1s";
+                    document.getElementsByTagName('p')[0].style.display = "none";
+                    getBar();
+
+        });
+
+        function getBar(){
+            var status= document.getElementById("bar");
+                status.style.width = "92px";
+            // status.style.WebKitTransition = "width .75s";
+            // status.style.transition = "width .75s";
+
+        }
+
+
+    </script>
+</html>
