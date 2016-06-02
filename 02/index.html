@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Button Two</title>
+        <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+        <style>
+
+            body{
+                background-color: rgb(98, 235, 146);
+
+                }
+
+            #mainCircle{
+
+                display: inline;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                margin-top: 100px;
+                margin-left: 100px;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: rgb(40,40,40);
+                background-color: rgba(0,0,0,0.7);
+                cursor: pointer;
+
+
+            }
+            #mainCircle p{
+                display:inline;
+                position:absolute;
+                font-family: "Titillium Web", sans-serif;
+                font-size: 25px;
+                color:rgb(255, 86, 58);
+                margin-top: 30px;
+                margin-left: 22px;
+
+
+            }
+            #backCircle{
+                display:inline;
+                position:absolute;
+                width:100px;
+                height:100px;
+                margin-top: 100px;
+                margin-left: 100px;
+                border-radius: 50%;
+                border-color: rgb(98,235,146);
+                background-color:rgb(98, 235, 146);
+                cursor: pointer;
+
+
+
+            }
+
+            #circleOne{
+                display:inline;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                margin-top: 140px;
+                margin-left: 130px;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: rgb(40,40,40);
+                background-color: rgba(0,0,0, 0.7);
+                cursor: pointer;
+
+
+
+
+            }
+            #circleOne p{
+
+                font-family: "Titillium Web", sans-serif;
+                font-size: 10px;
+                margin-top: 12px;
+                margin-left: 6px;
+
+            }
+            #circleOne:hover{
+                width: 70px;
+                height: 70px;
+            }
+            #circleTwo{
+                display:inline;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                margin-top: 140px;
+                margin-left: 110px;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: rgb(40, 40,40);
+                background-color: rgba(0,0,0, 0.7);
+                cursor: pointer;
+
+
+
+            }
+            #circleTwo p{
+                font-family: "Titillium Web", sans-serif;
+                font-size: 10px;
+                margin-top: 12px;
+                margin-left: 7px;
+
+
+
+            }
+
+            #circleTwo:hover{
+
+                width: 70px;
+                height: 70px;
+
+
+            }
+            #circleThree{
+                display:inline;
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                margin-top: 140px;
+                margin-left: 135px;
+                border-style: solid;
+                border-radius: 50%;
+                border-color: rgb(40, 40, 40);
+                background-color: rgba(0,0,0, 0.7);
+                cursor: pointer;
+
+
+
+            }
+            #circleThree p{
+
+
+                font-family: "Titillium Web", sans-serif;
+                font-size: 10px;
+                margin-top: 12px;
+                margin-left: 3px;
+
+            }
+            #circleThree:hover{
+                width: 70px;
+                height: 70px;
+
+
+
+}
+
+
+            /*#circleThree p:hover{
+
+                color:rgb(255, 86, 58);
+                font-size:18px;
+                margin-top:20px;
+                margin-left:6px;
+
+            }*/
+
+
+
+        </style>
+
+
+
+
+    <head>
+
+    <body>
+
+        <div id = "circleOne">
+            <p>About</p>
+
+        </div>
+
+            <div id = "circleTwo">
+                <p>Cases</p>
+
+            </div>
+
+                <div id = "circleThree">
+                    <p>Contact</p>
+
+                </div>
+                    <div id = "circleFour">
+
+                    </div>
+
+
+                        <div id = "backCircle">
+
+                        </div>
+
+                                <div id = "mainCircle">
+                                    <p>Menu</p>
+                                </div>
+
+
+
+
+
+
+
+
+
+
+    </body>
+
+    <script>
+
+        var main = document.getElementById('mainCircle').onclick = function(){
+            var circleOne = document.getElementById('circleOne');
+
+                if(circleOne.style.marginTop=="270px"){
+                    circleOne.style.WebKitTransition = "margin-top .55s";
+                    circleOne.style.transition = "margin-top .55s";
+                    circleOne.style.marginTop = "140px";
+                    buttonTwoHide();
+                    buttonThreeHide();
+
+                }else {
+                    circleOne.style.WebKitTransition = "margin-top .75s";
+                    circleOne.style.transition = "margin-top .75s";
+                    circleOne.style.marginTop = "270px";
+                    buttonTwo();
+                    buttonThree();
+
+                }
+                // buttonTwo();
+                // buttonThree();
+
+
+        }
+
+        function buttonTwo(){
+            var circleTwo = document.getElementById('circleTwo');
+                circleTwo.style.WebKitTransition = "margin-top .50s, margin-left .50s";
+                circleTwo.style.transition = "margin-top .50s, margin-left .50s";
+                circleTwo.style.marginTop = "270px";
+                circleTwo.style.marginLeft = "50px";
+
+        }
+
+        function buttonTwoHide(){
+            var circleTwo = document.getElementById('circleTwo');
+                circleTwo.style.WebKitTransition = "margin-top .50s, margin-left .10s";
+                circleTwo.style.transition = "margin-top .50s, margin-left .10s";
+                circleTwo.style.marginTop = "140px";
+                circleTwo.style.marginLeft = "110px";
+
+        }
+
+        function buttonThree(){
+            var circleThree = document.getElementById('circleThree');
+                circleThree.style.WebKitTransition = " margin-top .50s, margin-left .50s";
+                circleThree.style.transition = "margin-top .50s, margin-left .50s";
+                circleThree.style.marginTop = "270px";
+                circleThree.style.marginLeft = "210px";
+
+
+        }
+
+        function buttonThreeHide(){
+            var circleThree = document.getElementById('circleThree');
+                circleThree.style.WebKitTransition = " margin-top .50s, margin-left .50s";
+                circleThree.style.transition = "margin-top .50s, margin-left .50s";
+                circleThree.style.marginTop = "140px";
+                circleThree.style.marginLeft = "135px";
+
+
+        }
+
+        document.getElementById('circleThree').addEventListener("mouseover", mouseOver);
+        document.getElementById('circleThree').addEventListener("mouseout", mouseOut);
+
+        function mouseOver(){
+            var circleThree = document.getElementById('circleThree');
+                circleThree.getElementsByTagName('p')[0].style.color = "rgb(255, 86, 58)";
+                circleThree.getElementsByTagName('p')[0].style.fontSize= "18px";
+                circleThree.getElementsByTagName('p')[0].style.marginLeft = "6px";
+                circleThree.getElementsByTagName('p')[0].style.marginTop = "20px";
+
+        }
+
+        function mouseOut(){
+            var circleThree = document.getElementById('circleThree');
+                circleThree.getElementsByTagName('p')[0].style.color = "rgb(0,0,0)";
+                circleThree.getElementsByTagName('p')[0].style.marginLeft = "3px";
+                circleThree.getElementsByTagName('p')[0].style.fontSize = "10px";
+                circleThree.getElementsByTagName('p')[0].style.marginTop = "12px";
+
+
+        }
+        document.getElementById('circleTwo').addEventListener("mouseover", mouseOverTwo);
+        document.getElementById('circleTwo').addEventListener("mouseout", mouseOutTwo);
+
+        function mouseOverTwo(){
+            var circleTwo = document.getElementById('circleTwo');
+                circleTwo.getElementsByTagName('p')[0].style.color = "rgb(255, 86, 58)";
+                circleTwo.getElementsByTagName('p')[0].style.fontSize= "18px";
+                circleTwo.getElementsByTagName('p')[0].style.marginLeft = "12px";
+                circleTwo.getElementsByTagName('p')[0].style.marginTop = "20px";
+
+        }
+        function mouseOutTwo(){
+            var circleTwo = document.getElementById('circleTwo');
+            circleTwo.getElementsByTagName('p')[0].style.color = "rgb(0, 0, 0)";
+            circleTwo.getElementsByTagName('p')[0].style.fontSize= "10px";
+            circleTwo.getElementsByTagName('p')[0].style.marginLeft = "7px";
+            circleTwo.getElementsByTagName('p')[0].style.marginTop = "12px";
+
+        }
+        document.getElementById('circleOne').addEventListener("mouseover", mouseOverOne);
+        document.getElementById('circleOne').addEventListener("mouseout", mouseOutOne);
+
+        function mouseOverOne(){
+            var circleOne = document.getElementById('circleOne');
+                circleOne.getElementsByTagName('p')[0].style.color = "rgb(255, 86, 58)";
+                circleOne.getElementsByTagName('p')[0].style.fontSize= "18px";
+                circleOne.getElementsByTagName('p')[0].style.marginLeft = "12px";
+                circleOne.getElementsByTagName('p')[0].style.marginTop = "20px";
+
+
+        }
+
+        function mouseOutOne(){
+            var circleOne = document.getElementById('circleOne');
+                circleOne.getElementsByTagName('p')[0].style.color = "rgb(0, 0, 0)";
+                circleOne.getElementsByTagName('p')[0].style.fontSize= "10px";
+                circleOne.getElementsByTagName('p')[0].style.marginLeft = "6px";
+                circleOne.getElementsByTagName('p')[0].style.marginTop = "12px";
+
+        }
+
+
+
+    </script>
+</html>
