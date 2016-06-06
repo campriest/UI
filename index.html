@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>Button Three</title>
+        <link href='https://fonts.googleapis.com/css?family=Rajdhani:400,300' rel='stylesheet' type='text/css'>
+        <style>
+
+            body{
+                background-color: rgb(240, 240, 240);
+
+                }
+
+
+
+            #circle{
+                display: inline;
+                position: absolute;
+
+                margin-left: 200px;
+                margin-top:200px;
+
+                width: 100px;
+                height: 100px;
+                background-color: rgba(0, 0, 0, .5);
+                border-radius: 50%;
+                border-style: solid;
+                border-width: 3dpx;
+                border-color: rgb(0,0,0);
+                cursor: pointer;
+
+
+            }
+            #circle p{
+                position:absolute;
+                margin-left: 26px;
+                margin-top: 36px;
+                font-family: 'Rajdhani', sans-serif;
+                font-size: 23px;
+
+
+
+
+
+
+            }
+
+            #circle:hover{
+
+                -webkit-animation-name: progress;
+                -webkit-animation-duration: 2s  ;
+                -webkit-transition-timing-function:ease;
+                -webkit-animation-fill-mode: forwards;
+
+    }
+    @-webkit-keyframes progress{
+        0%{
+            /*border-color: rgb(255,255,255);*/
+        }
+        25%{
+            border-right: dotted;
+            border-color:rgb(255, 97, 0);
+        }
+        50%{
+            border-top: dotted;
+            border-color:rgb(255, 97, 0);
+        }
+        75%{
+        border-left: dotted;
+        border-color:rgb(255, 97, 0);
+    }
+
+        100%{
+        border-bottom: dotted;
+        border:dotted;
+        border-color:rgb(255, 97, 0);
+    }
+    }
+
+    #circleTwo{
+        display: none;
+        position: absolute;
+
+        margin-left: 200px;
+        margin-top:200px;
+
+        width: 100px;
+        height: 100px;
+        background-color: rgba(120, 120, 120, .5);
+        border-radius: 50%;
+        border-style: solid;
+        border-width: 1px;
+        border-color: rgba(120, 120,120, .6);
+        cursor: pointer;
+
+
+
+    }
+
+    #home, #back, #front, #about{
+        display: none;
+        position: absolute;
+        margin-left: 235px;
+        margin-top: 175px;
+        font-size: "10px";
+        font-family:'Rajdhani', sans-serif ;
+
+
+    }
+
+    #back{
+        margin-left: 287px;
+        margin-top: 225px;
+
+
+
+
+    }
+    #front{
+        margin-left: 185px;
+        margin-top:225px;
+
+    }
+    #about{
+        margin-left: 235px;
+        margin-top: 275px;
+
+    }
+        </style>
+
+
+
+
+    <head>
+
+    <body>
+
+
+
+        <div id = "circleTwo">
+
+        </div>
+
+            <div id = "circle">
+
+                <p>Menu</p>
+
+            </div>
+
+                    <div id = "home">
+
+                        <p>Home</p>
+
+                    </div>
+
+                        <div id = "back">
+
+                            <p>Back</p>
+
+                        </div>
+
+                            <div id = "front">
+
+                                <p>Front</p>
+
+                            </div>
+
+                                <div id = "about">
+
+                                    <p>About</p>
+
+                                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+
+            var push =  (function (){
+                    var button = document.getElementById("circle");
+                    var options = document.getElementById("circleTwo");
+                    var homeButton = document.getElementById("home");
+                    var frontButton = document.getElementById("front");
+                    var backButton = document.getElementById("back");
+                    var aboutButton = document.getElementById("about");
+
+
+                        var change = function(){
+
+
+                            button.style.width = "50px";
+                            button.style.height = "50px";
+                            button.style.marginLeft = "225px";
+                            button.style.marginTop = "225px";
+
+
+                        }
+                        var changeText = function(){
+                            button.getElementsByTagName("p")[0].innerHTML = "Close";
+                            button.getElementsByTagName("p")[0].style.marginLeft= "12px";
+                            button.getElementsByTagName("p")[0].style.marginTop = "16px";
+                            button.getElementsByTagName("p")[0].style.fontSize = "14px";
+                        }
+
+                        var changeTwo = function(){
+                            options.style.display = "inline";
+                            options.style.width = "142px";
+                            options.style.height = "142px";
+                            options.style.marginLeft = "179px";
+                            options.style.marginTop = "179px";
+                            options.style.borderColor = "rgba(0, 241, 152, .5)";
+
+                        }
+
+                        var show = function(){
+                            var all = [homeButton, frontButton, backButton, aboutButton];
+
+                                for( var i = 0; i < all.length; i++){
+
+                                    all[i].style.display = "inline";
+                                }
+                            // homeButton.style.display = "inline";
+                            // frontButton.style.display = "inline";
+                            // backButton.style.display = "inline";
+                            // aboutButton.style.display = "inline";
+                        }
+
+                    return{
+
+                            open : function(){
+                                button.onclick = function (){
+                                    var all = [homeButton, frontButton, backButton, aboutButton];
+                                    var both = [button, options];
+
+
+                                    if(button.style.width === "50px"){
+                                        for( var x = 0; x < both.length; x++){
+
+                                            both[x].style.marginLeft = "200px";
+                                            both[x].style.marginTop = "200px";
+                                            both[x].style.width = "100px";
+                                            both[x].style.height = "100px";
+
+                                            button.getElementsByTagName("p")[0].innerHTML = "Menu";
+                                            button.getElementsByTagName("p")[0].style.marginLeft = "26px";
+                                            button.getElementsByTagName("p")[0].style.marginTop = "36px";
+                                            button.getElementsByTagName("p")[0].style.fontSize = "23px";
+                                            options.style.display = "none";
+                                            
+
+
+
+
+                                        };
+                                        // options.style.width ="100px";
+                                        // options.style.height = "100px";
+                                        // options.style.marginLeft = "200px";
+                                        // options.style.marginTop = "200px";
+                                        // button.style.width = "100px";
+                                        // button.style.height = "100px";
+                                        // button.style.marginLeft = "200px";
+                                        // button.style.marginTop = "200px";
+                                            for(var i =0; i<all.length; i++){
+                                                all[i].style.display = "none";
+                                            };
+
+
+                                    } else {
+                                        change();
+                                        changeText();
+                                        changeTwo();
+                                        show();
+                                        // button.addEventListener("click", change);
+                                        // button.addEventListener("click", changeText);
+                                        // button.addEventListener("click", changeTwo);
+                                        // button.addEventListener("click", show);
+
+
+                                    }
+
+                                }
+                            }
+
+                        };
+
+
+                })();
+
+                    push.open();
+
+
+
+
+
+        </script>
+    </body>
+</html>
