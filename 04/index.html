@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "UTF-8">
+        <title>UI 4</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
+        <style>
+        body{
+            background: rgb(220, 220, 220);
+
+        }
+
+        #menuOne{
+            display:inline;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 200px;
+            background: rgb(37, 255, 216);
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            -webkit-transition: margin-left .75s;
+            transition: margin-left .75s;
+            cursor: pointer;
+
+
+        }
+
+        #menuTwo{
+            display:inline;
+            position: absolute;
+            margin-left: 245px;
+            margin-top: 200px;
+            background: rgb(37, 255, 216);
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            -webkit-transition: margin-left .75s;
+            transition: margin-left .75s;
+            cursor: pointer;
+
+
+        }
+
+        #menuThree{
+
+            display:inline;
+            position: absolute;
+            margin-left: 200px;
+            margin-top: 245px;
+            background: rgb(37, 255, 216);
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            /*border-style: solid;
+            border-color: rgba(0,0,0,.4);*/
+            -webkit-transition: margin-left .75s;
+            transition: margin-left .75s;
+            cursor: pointer;
+
+
+
+
+        }
+
+
+
+        #menuFour{
+
+
+            display:inline;
+            position: absolute;
+            margin-left: 245px;
+            margin-top: 245px;
+            background: rgb(37, 255, 216);
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+            -webkit-transition: margin-left .75s;
+            transition: margin-left .75s;
+            cursor: pointer;
+
+
+
+        }
+
+
+
+        #menu{
+            display: inline;
+            position:absolute;
+            margin-left: 218px;
+            margin-top: 210px;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 24px;
+            cursor: pointer;
+
+
+
+
+
+        }
+
+        #home p{
+            position: absolute;
+            display: none;
+
+
+            margin-left:186px;
+            margin-top:200px;
+            font-family: 'Quicksand', sans-serif;
+            font-size:13px;
+            cursor:pointer;
+
+
+        }
+        #next p{
+
+            position: absolute;
+            display:none;
+            margin-left: 189px;
+            margin-top: 284px;
+            font-family: 'Quicksand', sans-serif;
+            font-size:13px;
+            cursor: pointer;
+
+
+        }
+
+
+        #back p{
+            position: absolute;
+            display: none;
+            margin-left: 275px;
+            margin-top: 200px;
+            font-family: 'Quicksand', sans-serif;
+            font-size:13px;
+            cursor: pointer;
+
+
+
+
+        }
+
+
+        </style>
+
+
+
+    </head>
+
+
+    <body>
+
+        <div id = "menuOne">
+
+        </div>
+
+            <div id = "menuTwo">
+
+            </div>
+
+                <div id = "menuThree">
+
+                </div>
+
+                    <div id = "menuFour">
+
+                    </div>
+
+                        <div id = "menu">
+                            <p>Menu</p>
+
+                        </div>
+
+                        <div id = "home">
+                            <p>Home</p>
+                            <div>
+
+                                <div id = "next">
+                                    <p>Next</p>
+
+                                    <div>
+
+                                        <div id = "back">
+                                            <p>Back</p>
+
+                                        </div>
+
+
+
+    </body>
+
+    <script>
+
+    var menu = (function(){
+        var boxOne = document.getElementById("menuOne");
+        var boxTwo = document.getElementById("menuTwo");
+        var boxThree = document.getElementById("menuThree");
+        var boxFour = document.getElementById("menuFour");
+        var icon = document.getElementById("menu");
+
+        var homeNew = document.getElementById("home");
+        var nextNew = document.getElementById("next");
+        var backNew= document.getElementById("back");
+
+        var all = [homeNew, nextNew, backNew];
+
+
+        var iconMove = function(){
+            icon.getElementsByTagName("p")[0].innerHTML = "X";
+
+            icon.getElementsByTagName("p")[0].style.fontSize = "30px";
+            icon.getElementsByTagName("p")[0].style.marginTop = "64px";
+            icon.getElementsByTagName("p")[0].style.marginLeft = "64px";
+            icon.getElementsByTagName("p")[0].style.color = "rgb(255, 99, 44)";
+
+            boxFour.style.background = "rgba(255, 255, 255, .6)";
+            boxFour.style.borderStyle = "solid";
+            boxFour.style.borderWidth = "2px";
+            boxFour.style.borderColor = "rgb(93, 0, 255)";
+
+
+
+        }
+
+        var boxOneMove = function(){
+            boxOne.style.marginTop= "180px";
+            boxOne.style.marginLeft = "180px";
+
+        }
+
+        var boxTwoMove = function(){
+            boxTwo.style.marginTop = "180px";
+            boxTwo.style.marginLeft = "265px";
+
+
+
+        }
+
+        var boxThreeMove = function (){
+            boxThree.style.marginTop = "265px";
+            boxThree.style.marginLeft = "180px";
+
+
+        }
+
+        var boxFourMove = function(){
+
+            boxFour.style.marginTop = "265px";
+            boxFour.style.marginLeft = "265px";
+
+        }
+
+        var text = function (){
+
+
+                        for(var i = 0; i < all.length; i++){
+
+                            all[i].getElementsByTagName("p")[0].style.display= "inline";
+
+
+
+                        };
+
+
+                    }
+
+            var close = function (){
+
+                    for(var i =0; i<all.length; i++){
+                        all[i].getElementsByTagName("p")[0].style.display = "none";
+
+
+                    }
+
+
+            }
+
+
+        return{
+            move: function(){
+                icon.onclick = function(){
+
+                        if(boxOne.style.marginTop === "180px"){
+                            boxOne.style.marginTop= "200px";
+                            boxOne.style.marginLeft = "200px";
+                            boxTwo.style.marginTop = "200px";
+                            boxTwo.style.marginLeft = "245px";
+                            boxThree.style.marginTop = "245px";
+                            boxThree.style.marginLeft = "200px";
+                            boxFour.style.marginTop = "245px";
+                            boxFour.style.marginLeft = "245px";
+                            icon.getElementsByTagName("p")[0].innerHTML = "Menu";
+                            icon.getElementsByTagName("p")[0].style.marginTop = "23px";
+                            icon.getElementsByTagName("p")[0].style.marginLeft = "0px";
+                            boxFour.style.background = "rgb(37, 255, 216)";
+                            boxFour.style.borderWidth= "0px";
+                            icon.getElementsByTagName("p")[0].style.fontSize = "24px";
+                            icon.getElementsByTagName("p")[0].style.color = "rgb(0,0,0)";
+                            close();
+
+
+
+                        }else{
+
+                        iconMove();
+                        boxOneMove();
+                        boxTwoMove();
+                        boxThreeMove();
+                        boxFourMove();
+
+
+
+                            setTimeout(function(){text();}, 715);
+
+
+
+
+
+                        }
+
+
+
+
+
+                    }
+
+
+
+            }
+
+
+
+        }
+
+
+
+    })();
+    menu.move();
+
+
+    </script>
+
+
+
+
+</html>
