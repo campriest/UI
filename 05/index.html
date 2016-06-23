@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset = "UTF-8">
+
+    <title>Cameron Priestley</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,100' rel='stylesheet' type='text/css'>
+
+    <style>
+
+    body{
+
+        background-color: rgb(225, 225, 225);
+
+
+    }
+
+    #optionOne {
+
+        position:absolute;
+        display:inline;
+        width:40px;
+        height:8px;
+        font-size: 8px;
+        margin-left:65px;
+        margin-top: 42px;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(255, 65, 4);
+    }
+
+    #barOne{
+        display: inline;
+        position: absolute;
+        width:40px;
+        height: 8px;
+        border-radius: 12px;
+        margin-left: 50px;
+        margin-top: 50px;
+        background-color: rgb(100, 100, 100);
+        -webkit-transition: width 2s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+    }
+
+
+    #barTwo{
+        display:inline;
+        position: absolute;
+        width:40px;
+        height: 8px;
+        right: 1168px;
+        border-radius: 12px;
+        /*margin-right: 20px;*/
+        margin-top: 50px;
+        background-color: rgb(100, 100, 100);
+        -webkit-transition: width 2s;
+        cursor: pointer;
+        transition-timing-function: ease;
+
+
+    }
+
+
+
+
+    #optionTwo{
+        position:absolute;
+        display:inline;
+        height: 8px;
+        font-size: 8px;
+        margin-left:65px;
+        margin-top: 57px;
+
+        font-family: 'Roboto', sans-serif;
+        color: rgb(255, 65, 4);
+
+
+    }
+
+    #barThree{
+        display: inline;
+        position:absolute;
+        width:40px;
+        height: 8px;
+        border-radius: 12px;
+        margin-left: 50px;
+        margin-top: 65px;
+        background-color: rgb(100, 100, 100);
+        -webkit-transition: width 2s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+    }
+    #barFour{
+        display: inline;
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        border-radius: 12px;
+        right:1168px;
+        /*margin-left: 60px;*/
+        margin-top: 65px;
+        background-color: rgb(100, 100, 100);
+        -webkit-transition: width 2s;
+        transition-timing-function: ease;
+        cursor:pointer;
+
+
+    }
+
+
+    #barFive{
+        display: inline;
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        border-radius: 12px;
+        margin-left: 50px;
+        margin-top: 80px;
+        background-color: rgb(100, 100, 100);
+        -webkit-transition: width 2s;
+        transition-timing-function: ease;
+        cursor:pointer;
+
+
+    }
+
+    #barSix{
+        display: inline;
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        border-radius: 12px;
+        right: 1168px;
+        /*margin-left: 60px;*/
+        margin-top: 80px;
+        background-color: rgb(100,100,100);
+        -webkit-transition: width 2s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+
+    }
+
+    #optionThree{
+        position:absolute;
+        display:inline;
+        height: 8px;
+        font-size: 8px;
+        margin-left: 65px;
+        margin-top: 72px;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(255, 65, 4);
+
+    }
+
+    </style>
+
+</head>
+
+<body>
+
+
+            <div id = "oneBar">
+                <div id = "optionOne">
+                    <p>HOME</p>
+
+                </div>
+
+                <div id = "barOne">
+
+                </div>
+
+                    <div id = "barTwo">
+
+                    </div>
+
+
+
+            </div>
+
+
+
+
+
+        <div id = "twoBar">
+
+            <div id = "optionTwo">
+
+                <p>NEXT</p>
+
+            </div>
+
+                <div id = "barThree">
+
+                </div>
+
+                    <div id = "barFour">
+
+                    </div>
+
+
+
+        </div>
+
+
+        <div id = "threeBar">
+
+            <div id = "optionThree">
+                <p>BACK</p>
+
+            </div>
+
+                    <div id = "barFive">
+
+                    </div>
+
+
+                            <div id = "barSix">
+
+
+                            </div>
+
+
+
+        </div>
+
+
+</body>
+
+    <script>
+
+    var menu = (function(){
+
+        var first = document.getElementById("oneBar");
+
+        var two = document.getElementById("twoBar");
+
+        var three = document.getElementById("threeBar");
+
+
+
+        var firstSlide = function(){
+
+            first.onmouseover = function(){
+                document.getElementById("barOne").style.width = "3px";
+                document.getElementById("barTwo").style.width = "3px";
+
+            }
+
+            first.onmouseout = function(){
+                document.getElementById("barOne").style.width = "40px";
+                document.getElementById("barTwo").style.width = "40px";
+
+
+            }
+
+
+        }
+
+        var secondSlide = function(){
+
+            two.onmouseover = function(){
+                document.getElementById("barThree").style.width = "3px";
+                document.getElementById("barFour").style.width = "3px";
+            }
+
+            two.onmouseout = function(){
+                document.getElementById("barThree").style.width = "40px";
+                document.getElementById("barFour").style.width = "40px";
+            }
+
+        }
+
+        var threeSlide = function(){
+
+            three.onmouseover = function(){
+                document.getElementById("barFive").style.width = "3px";
+                document.getElementById("barSix").style.width = "3px";
+
+            }
+
+            three.onmouseout = function(){
+                document.getElementById("barFive").style.width = "40px";
+                document.getElementById("barSix").style.width = "40px";
+
+            }
+
+        }
+
+
+        return{
+
+            move: function(){
+
+                firstSlide();
+                secondSlide();
+                threeSlide();
+
+            }
+
+
+
+}
+
+    })();
+menu.move();
+
+
+    </script>
+
+
+
+
+</html>
