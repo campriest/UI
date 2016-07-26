@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset = "UTF-8">
+                <title>UI 4</title>
+                <link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
+                <link href='https://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    </head>
+    <style>
+    body{
+        background:rgb(190,190,190);
+
+    }
+
+    #mainCircle, #circleOne, #circleTwo, #circleThree, #circleFour{
+        display : inline;
+        position:absolute;
+        margin-left: 100px;
+        margin-top: 100px;
+        width: 60px;
+        height: 60px;
+        background: rgba(100, 100, 100, .6);
+        border-style: solid;
+        border-radius: 50%;
+        border-width: 2px;
+
+
+    }
+
+
+    #mainCircle:hover{
+
+        background: rgba(255, 83, 13, .6);
+
+
+    }
+    #mainCircle p{
+        position:absolute;
+        display:inline;
+        margin-left:8px;
+        margin-top: 18px;
+        font-size:18px;
+        font-family: 'Oxygen', sans-serif;
+
+    }
+
+    #close p{
+        position: absolute;
+        display: none;
+        margin-top: 107px;
+        margin-left: 123px;
+        font-size: 40px;
+        font-family: 'Dosis', sans-serif;
+    }
+
+    #circleOne{
+        display:none;
+        /*-webkit-animation: move .2s ease;
+        animation: move .2s ease ;
+
+        animation-fill-mode:forwards;*/
+
+        background: none;
+
+
+
+
+    }
+    .homeOn{
+
+        display:none;
+    }
+
+    .homeOff{
+        position:absolute;
+        display:inline;
+        margin-left:10px;
+        margin-top:5px;
+        font-size: 16px;
+        font-family: 'Oxygen', sans-serif;
+        color: white;
+    }
+
+
+    .oneActive{
+
+        -webkit-animation: move .9s ease;
+        animation: move .9s ease ;
+        animation-fill-mode:forwards;
+
+        display: inline;
+        margin-top: 100px;
+        margin-left:100px;
+        background:none;
+    }
+
+    @-webkit-keyframes move{
+        0%{margin-top: 30px; background: rgba(0, 100, 200, .6);}
+        10%{margin-top:0px; margin-left:140px; background: rgba(0, 100, 200, .6);}
+        100%{margin-top: 100px; background: none;}
+
+    }
+    @keyframes move{
+        0%{margin-top: 30px; background: rgba(0, 100, 200, .6);}
+        10% {margin-top:0px; margin-left:140px; background: rgba(0, 100, 200, .6);}
+        100% {margin-top: 100px; background: none;}
+
+    }
+
+    .oneClose{
+
+        -webkit-animation: closeOne .3s ease-out;
+        animation: closeOne .3s ease-out ;
+        background: rgba(0,100,200, .6);
+        animation-fill-mode: forwards;
+
+
+    }
+
+
+    @-webkit-keyframes closeOne{
+        0%{margin-top: 100px; background: rgba(0, 100, 200, .6);}
+        /*4%{margin-top: 20px; background: rgba(0,100,200,.6);}
+        5%{margin-left: 120px; background:rgba(0, 100, 200, .6);}*/
+
+        100%{margin-top: 30px; background:rgba(0, 100, 200, .6);}
+
+    }
+    @keyframes closeOne{
+        0%{margin-top: 100px; background: rgba(0, 100, 200, .6);}
+        /*4% {margin-top: 20px; background: rgba(0, 100, 200, .6);}
+        5%{margin-left: 120px; background:rgba(0, 100, 200, .6);}
+        6%{animation-delay: 4s;}*/
+        100%{margin-top: 30px; background: rgba(0, 100, 200, .6);}
+
+    }
+    #circleTwo{
+        display:none;
+
+        background:none;
+
+    }
+
+    .forwardOn{
+
+        display: none;
+    }
+
+    .forwardOff{
+        position:absolute;
+
+        display:inline;
+        margin-top:-16px;
+        margin-left: 22px;
+        font-size: 28px;
+        font-family: 'Oxygen', sans-serif;
+        color:white;
+    }
+
+
+    .twoActive{
+
+        -webkit-animation: moveTwo .8s ease;
+        animation: moveTwo .8s ease ;
+        animation-fill-mode:forwards;
+        margin-left:100px;
+        margin-top:100px;
+        display:inline;
+        background: none;
+
+
+
+    }
+
+    @-webkit-keyframes moveTwo{
+        0%{margin-left: 170px; background:rgba(0, 100, 200, .6);}
+        10%{margin-top:110px; margin-left:190px; background: rgba(0, 100, 200, .6);}
+
+        100%{margin-left: 100px; background: none ;}
+
+    }
+    @keyframes moveTwo{
+        0%{margin-left:170px; background:rgba(0, 100, 200, .6);}
+        10%{margin-top:120px; margin-left:190px; background: rgba(0, 100, 200, .6);}
+        100%{margin-left: 100px; background: none ;}
+
+    }
+
+    .twoClose{
+        -webkit-animation: closeTwo .3s ease-out;
+        animation: closeTwo .3s ease-out ;
+        background: rgba(0,100,200, .6);
+        animation-fill-mode: forwards;
+
+    }
+
+    @-webkit-keyframes closeTwo{
+
+        0% {margin-left: 100px; background: none;}
+        100% {margin-left: 170px; background:rgba(0, 100, 200, .6) ;}
+
+    }
+
+    @keyframes closeTwo{
+        0% {margin-left: 100px; background: none;}
+        100% {margin-left: 170px; background: rgba(0, 100, 200, .6);}
+    }
+
+
+
+    #circleThree{
+        display: none;
+
+        background: none;
+
+
+    }
+
+
+
+    .aboutOn{
+        display:none;
+    }
+
+    .aboutOff{
+        position:absolute;
+        display:inline;
+        margin-top: 4px;
+        margin-left: 8px;
+        font-size:16px;
+        font-family: 'Oxygen', sans-serif;
+        color: white;
+
+    }
+    .threeActive{
+        -webkit-animation: moveThree .7s ease;
+        animation: moveThree .7s ease ;
+
+        animation-fill-mode:forwards;
+
+        margin-left: 100px;
+        margin-top: 100px;
+        display:inline;
+        background: none;
+
+
+    }
+
+
+
+    @-webkit-keyframes moveThree{
+        0% {margin-top: 170px; background: rgba(0, 100, 200, .6);}
+        10%{margin-top:200px; margin-left: 70px; background: rgba(0, 100, 200, .6);}
+        100% {margin-top: 100px; background: none;}
+
+    }
+    @keyframes moveThree{
+        0% {margin-top: 170px; background: rgba(0, 100, 200, .6);}
+        10%{margin-top:200px; margin-left: 70px; background: rgba(0, 100, 200, .6);}
+        100% {margin-top: 100px; background: none;}
+
+    }
+
+    .threeClose{
+        -webkit-animation: closeThree .3s ease-out;
+        animation: closeThree .3s ease-out ;
+        background: rgba(0,100,200, .6);
+        animation-fill-mode: forwards;
+
+
+
+    }
+
+    @-webkit-keyframes closeThree{
+        0% {margin-top:100px; background: none;}
+        100% {margin-top:170px; background:rgba(0, 100, 200, .6);}
+
+    }
+
+    @keyframes closeThree{
+        0% {margin-top: 100px; background:none ;}
+        100% {margin-top:170px; background:rgba(0, 100, 200, .6);}
+
+
+
+    }
+
+    #circleFour{
+        display: none;
+
+        background: none;
+
+
+    }
+
+    .backOn{
+
+        display: none;
+    }
+    .backOff{
+        position:absolute;
+        display: inline;
+        margin-top: -16px;
+        margin-left: 20px;
+        font-size: 28px;
+        font-family: 'Oxygen', sans-serif;
+        color: white;
+
+    }
+    .fourActive{
+        -webkit-animation: moveFour .6s ease;
+        animation: moveFour .6s ease ;
+
+        animation-fill-mode:forwards;
+
+        margin-left: 100px;
+        margin-top: 100px;
+        display:inline;
+        background: none;
+
+
+    }
+
+    @-webkit-keyframes moveFour{
+        0% {margin-left: 30px; background: rgba(0, 100, 200, .6);}
+        10%{margin-top:60px; margin-left:0px; background: rgba(0, 100, 200, .6);}
+        100% {margin-left: 100px; background: none;}
+
+    }
+    @keyframes moveFour{
+        0% {margin-left: 30px; background: rgba(0, 100, 200, .6);}
+        10%{margin-top:60px; margin-left:0px; background: rgba(0, 100, 200, .6);}
+        100% {margin-left: 100px; background: none ;}
+
+    }
+
+    .fourClose{
+        -webkit-animation: closeFour .3s ease-out;
+        animation: closeFour .3s ease-out ;
+        background: rgba(0,100,200, .6);
+        animation-fill-mode: forwards;
+
+
+    }
+
+    @-webkit-keyframes closeFour{
+        0% {margin-left: 100px; background: none;}
+        100% {margin-left: 30px; background:rgba(0,100,200, .6);}
+
+    }
+
+    @keyframes closeFour{
+        0% {margin-left: 100px; background: none;}
+        100% {margin-left: 30px; background:rgba(0,100,200, .6);}
+
+    }
+
+
+    </style>
+
+<body>
+
+
+
+        <div id = "circleOne" class = "oneActive">
+
+                <div id = "home" class = "homeOn">
+                    <p>home</p>
+                </div>
+
+        </div>
+
+            <div id = "circleTwo" class = "twoActive">
+
+                    <div id = "forward" class = "forwardOn">
+                        <p>></p>
+                    </div>
+
+            </div>
+                <div id = "circleThree" class = "threeActive">
+
+                    <div id = "about" class = "aboutOn">
+                        <p>about</p>
+
+                    </div>
+
+                </div>
+                    <div id = "circleFour" class = "fourActive">
+
+                        <div id ="back" class = "backOn">
+                            <p><</p>
+                        </div>
+
+                    </div>
+
+                    <div id = "mainCircle">
+                        <p>menu</p>
+                    </div>
+
+                    <div id = "close">
+
+                        <p>X</p>
+                    </div>
+
+</body>
+
+
+<script>
+
+
+var main = (function(){
+    var mainCircle = document.getElementById("mainCircle");
+
+    var circleOne = document.getElementById("circleOne");
+    var circleTwo = document.getElementById("circleTwo");
+    var circleThree = document.getElementById("circleThree");
+    var circleFour = document.getElementById("circleFour");
+    var close = document.getElementById("close");
+
+
+    // var oneClose = function(){
+    //
+    // };
+
+    var oneOpen = function(){
+
+
+        circleOne.classList.toggle("oneClose");
+        circleOne.style.display = "inline";
+        circleOne.style.borderRadius = "none";
+        document.getElementById("home").classList.toggle("homeOff");
+        document.getElementById("about").classList.toggle("aboutOff");
+        document.getElementById("back").classList.toggle("backOff");
+        document.getElementById("forward").classList.toggle("forwardOff");
+    };
+
+    // var twoClose = function(){
+    //     circleTwo.style.background = "none";
+    //     circleTwo.style.marginLeft = "100px";
+    // };
+
+    var twoOpen = function(){
+
+
+        circleTwo.classList.toggle("twoClose");
+        circleTwo.style.display = "inline";
+        circleTwo.style.borderRadius = "none";
+    };
+
+    // var threeClose = function(){
+    //     circleThree.style.background = "none";
+    //     circleThree.style.marginTop = "100px";
+    //
+    //
+    // };
+    var threeOpen = function(){
+
+        circleThree.classList.toggle("threeClose");
+        circleThree.style.display = "inline";
+        circleThree.style.borderRadius = "none";
+
+    };
+
+    // var fourClose = function(){
+    //     circleFour.style.background = "none";
+    //     circleFour.style.marginLeft = "100px";
+    //
+    // };
+
+    var fourOpen = function(){
+
+
+        circleFour.classList.toggle("fourClose");
+        circleFour.style.display = "inline";
+        circleFour.style.borderRadius = "none";
+    }
+
+    // var showX = function(){
+    //
+    //     document.getElementById("close").style.display = "inline";
+    //
+    //
+    //
+    // }
+
+    var move = function(){
+
+
+        mainCircle.onclick = function(){
+
+
+
+
+
+
+                oneOpen();
+                twoOpen();
+                threeOpen();
+                fourOpen();
+
+                if(close.getElementsByTagName("p")[0].style.display === "inline"){
+
+
+                    mainCircle.getElementsByTagName("p")[0].style.display = "inline";
+                    close.getElementsByTagName("p")[0].style.display = "none";
+
+
+
+                } else{
+                    close.getElementsByTagName("p")[0].style.display = "inline";
+                    mainCircle.getElementsByTagName("p")[0].style.display = "none";
+
+
+
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }
+
+
+    }
+
+    return{
+
+        basic: function(){
+
+            move();
+
+
+        }
+
+
+
+    }
+
+}());
+
+main.basic();
+
+
+
+</script>
+
+</html>
